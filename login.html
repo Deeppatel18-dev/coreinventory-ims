@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>CoreInventory Login</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>CoreInventory Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="login-page">
-
-<div class="login-container">
-
-<h2>CoreInventory</h2>
-<p class="subtitle">Inventory Management System</p>
-
-<form action="index.html">
-
-<label>Email / Username</label>
-<input type="text" placeholder="Enter email or username" required>
-
-<label>Password</label>
-<input type="password" placeholder="Enter password" required>
-
-<button type="submit">Login</button>
-
-<p class="forgot">
-<a href="forgot-password.html">Forgot Password?</a>
-</p>
-
-</form>
-
-</div>
-
+    <div class="login-container">
+        <h2>CoreInventory</h2>
+        <p class="subtitle">Inventory Management System</p>
+        <form onsubmit="handleLogin(event)">
+            <label>Email / Username</label>
+            <input type="text" id="loginEmail" placeholder="Enter email or username" required>
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+            <p class="forgot">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </p>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

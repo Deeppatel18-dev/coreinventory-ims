@@ -1,193 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Warehouses - CoreInventory</title>
-<!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<style>
-    body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f6fb;
-display:flex;
-}
-
-/* Sidebar */
-
-.sidebar{
-width:220px;
-background:linear-gradient(180deg,#1e293b,#0f172a);
-color:white;
-height:100vh;
-padding-top:20px;
-position:fixed;
-left:0;
-top:0;
-}
-
-.sidebar h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-.sidebar a{
-display:block;
-padding:12px 20px;
-color:white;
-text-decoration:none;
-font-size:15px;
-}
-
-.sidebar a:hover{
-background:#334155;
-}
-
-/* Main Content */
-
-.main-content{
-margin-left:220px;
-padding:30px;
-width:100%;
-}
-
-/* Heading */
-
-h1{
-margin-top:0;
-}
-
-/* Add Button */
-
-.add-btn{
-background:#2563eb;
-color:white;
-border:none;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-margin-bottom:20px;
-}
-
-.add-btn:hover{
-background:#1d4ed8;
-}
-
-/* Table */
-
-table{
-width:100%;
-border-collapse:collapse;
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
-
-th{
-background:#1e293b;
-color:white;
-padding:12px;
-text-align:left;
-}
-
-td{
-padding:12px;
-border-bottom:1px solid #eee;
-}
-
-tr:hover{
-background:#f1f5f9;
-}
-
-/* Buttons */
-
-.edit-btn{
-background:#22c55e;
-color:white;
-border:none;
-padding:6px 10px;
-border-radius:4px;
-cursor:pointer;
-margin-right:5px;
-}
-
-.delete-btn{
-background:#ef4444;
-color:white;
-border:none;
-padding:6px 10px;
-border-radius:4px;
-cursor:pointer;
-}
-
-.edit-btn:hover{
-opacity:0.9;
-}
-
-.delete-btn:hover{
-opacity:0.9;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <title>Warehouses - CoreInventory</title>
+    <link rel="stylesheet" href="product.css"> </head>
 <body>
-
 <div class="sidebar">
-
-<h2>CoreInventory</h2>
-
- <!-- <ul> -->
-  <a href="index.html">Dashboard</a>
-<a href="products.html">Products</a>
-<a href="receipts.html">Receipts</a>
-<a href="delivery.html">Delivery</a>
-<a href="transfer.html">Transfer</a>
-<a href="adjustment.html">Adjustment</a>
-<a href="history.html">History</a>
-<a href="warehouse1.html">Warehouses</a>
-<!-- <li>Profile</li> -->
-<a href="login.html">Logout</a>
-</ul>  
-
+    <h2>Inventory</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="products.html">Products</a>
+    <a href="receipts.html">Receipts</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="adjustment.html">Adjustment</a>
+    <a href="history.html">History</a>
+    <a href="warehouse1.html">Warehouses</a>
+    <a href="login.html" id="Logout">Logout</a>
 </div>
 
-<div class="main-content">
+<div class="main">
+    <h1>Warehouse Management</h1>
+    <div class="form-card">
+        <h3>Add Warehouse</h3>
+        <input type="text" id="wName" placeholder="Warehouse Name">
+        <input type="text" id="wLoc" placeholder="Location">
+        <input type="text" id="wMgr" placeholder="Manager">
+        <button onclick="addWarehouse()">+ Add Warehouse</button>
+    </div>
 
-<h1>Warehouse Management</h1>
-
-<button class="add-btn">+ Add Warehouse</button>
-
-<table>
-
-<tr>
-<th>Warehouse Name</th>
-<th>Location</th>
-<th>Manager</th>
-<th>Actions</th>
-</tr>
-
-<tr>
-<td>Main Warehouse</td>
-<td>Ahmedabad</td>
-<td>Raj Patel</td>
-<td>
-<button class="edit-btn">Edit</button>
-<button class="delete-btn">Delete</button>
-</td>
-</tr>
-
-<tr>
-<td>Production Store</td>
-<td>Surat</td>
-<td>Amit Shah</td>
-<td>
-<button class="edit-btn">Edit</button>
-<button class="delete-btn">Delete</button>
-</td>
-</tr>
-
-</table>
-
+    <table>
+        <thead>
+            <tr><th>Warehouse Name</th><th>Location</th><th>Manager</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

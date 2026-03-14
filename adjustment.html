@@ -1,86 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<meta charset="UTF-8">
-<title>Inventory Adjustment</title>
-<link rel="stylesheet" href="product.css">
+    <meta charset="UTF-8">
+    <title>Inventory Adjustment</title>
+    <link rel="stylesheet" href="product.css">
 </head>
-
 <body>
-
 <div class="sidebar">
-
-<h2>Inventory</h2>
-
-<a href="index.html">Dashboard</a>
-<a href="products.html">Products</a>
-<a href="receipts.html">Receipts</a>
-<a href="delivery.html">Delivery</a>
-<a href="transfer.html">Transfer</a>
-<a href="adjustment.html">Adjustment</a>
-<a href="history.html">History</a>
-<a href="warehouse1.html">Warehouses</a>
-<a href="login.html" id="Logout">Logout</a>
-
+    <h2>Inventory</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="products.html">Products</a>
+    <a href="receipts.html">Receipts</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="adjustment.html">Adjustment</a>
+    <a href="history.html">History</a>
+    <a href="warehouse1.html">Warehouses</a>
+    <a href="login.html" id="Logout">Logout</a>
 </div>
 
 <div class="main">
+    <h1>Inventory Adjustment</h1>
+    <div class="form-card">
+        <h3>Adjust Stock</h3>
+        <input type="text" id="aProduct" placeholder="Product Name">
+        <input type="text" id="aWh" placeholder="Warehouse">
+        <input type="number" id="aSysQty" placeholder="System Quantity">
+        <input type="number" id="aActQty" placeholder="Actual Quantity">
+        <input type="text" id="aReason" placeholder="Reason">
+        <button onclick="addAdjustment()">Adjust Stock</button>
+    </div>
 
-<h1>Inventory Adjustment</h1>
-
-<div class="form-card">
-
-<h3>Adjust Stock</h3>
-
-<input type="text" placeholder="Product Name">
-
-<input type="text" placeholder="Warehouse">
-
-<input type="number" placeholder="System Quantity">
-
-<input type="number" placeholder="Actual Quantity">
-
-<input type="text" placeholder="Reason">
-
-<button>Adjust Stock</button>
-
+    <h2>Adjustment History</h2>
+    <table>
+        <thead>
+            <tr><th>Date</th><th>Product</th><th>Warehouse</th><th>System Qty</th><th>Actual Qty</th><th>Reason</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </div>
-
-<h2>Adjustment History</h2>
-
-<table>
-
-<tr>
-<th>Date</th>
-<th>Product</th>
-<th>Warehouse</th>
-<th>System Qty</th>
-<th>Actual Qty</th>
-<th>Reason</th>
-</tr>
-
-<tr>
-<td>16 Jun</td>
-<td>Steel Rod</td>
-<td>Main Warehouse</td>
-<td>50</td>
-<td>47</td>
-<td>Damaged</td>
-</tr>
-
-<tr>
-<td>17 Jun</td>
-<td>Chair</td>
-<td>Warehouse B</td>
-<td>20</td>
-<td>18</td>
-<td>Broken</td>
-</tr>
-
-</table>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>

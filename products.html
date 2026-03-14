@@ -23,7 +23,8 @@
 <a href="adjustment.html">Adjustment</a>
 <a href="history.html">History</a>
 <a href="warehouse1.html">Warehouses</a>
-<a href="login.html">Logout</a>
+<a href="login.html" id="Logout">Logout</a>
+
 </div>
 
 <!-- Main Content -->
@@ -37,13 +38,9 @@
 <h3>Add Product</h3>
 
 <input type="text" placeholder="Product Name">
-
 <input type="text" placeholder="SKU">
-
 <input type="text" placeholder="Category">
-
 <input type="text" placeholder="Unit">
-
 <input type="number" placeholder="Stock Quantity">
 
 <button>Add Product</button>
@@ -54,17 +51,23 @@
 
 <table>
 
+<thead>
 <tr>
 <th>Name</th>
 <th>SKU</th>
 <th>Category</th>
+<th>unit</th>
 <th>Stock</th>
 </tr>
+</thead>
+
+<tbody>
 
 <tr>
 <td>Steel Rod</td>
 <td>SR001</td>
 <td>Raw Material</td>
+<td>kg</td>
 <td>100</td>
 </tr>
 
@@ -72,8 +75,11 @@
 <td>Chair</td>
 <td>CH002</td>
 <td>Furniture</td>
+<td>Piece</td>
 <td>50</td>
 </tr>
+
+</tbody>
 
 </table>
 

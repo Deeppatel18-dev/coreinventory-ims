@@ -28,12 +28,16 @@ text-decoration:none;
 }
 
 .sidebar a:hover{
-background:rgb(110, 108, 105);
-color: lightblue;
+background:rgb(110,108,105);
+color:lightblue;
 }
-#Logout:hover {
-    color: red;
+
+/* Logout hover */
+
+#Logout:hover{
+color:red;
 }
+
 /* Main Area */
 
 .main{
@@ -102,7 +106,7 @@ cursor:pointer;
 background:#1d4ed8;
 }
 
-/* Table */
+/* Table Fix */
 
 table{
 width:100%;
@@ -111,20 +115,23 @@ background:white;
 border-radius:10px;
 overflow:hidden;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
+table-layout:fixed;
+}
+
+th, td{
+padding:12px;
+text-align:left;
 }
 
 th{
 background:#1e293b;
 color:white;
-padding:12px;
 }
 
 td{
-padding:12px;
 border-bottom:1px solid #eee;
 }
 
 tr:hover{
-background:white
-;
+background:#f1f5f9;
 }

@@ -16,7 +16,7 @@ db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS adjustments (id INTEGER PRIMARY KEY AUTOINCREMENT, product TEXT, warehouse TEXT, system_qty INTEGER, actual_qty INTEGER, reason TEXT, date TEXT)`);
     db.run(`CREATE TABLE IF NOT EXISTS warehouses (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, location TEXT, manager TEXT)`);
 
-    console.log("✅ Database Ready!");
+    console.log("Database Ready!");
 });
 
 module.exports = db;

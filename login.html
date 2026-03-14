@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">    
 <meta charset="UTF-8">
 <title>CoreInventory Login</title>
 <link rel="stylesheet" href="style.css">
-<script>
-async function loginUser(event) {
-
-  event.preventDefault();   // form reload rokva mate
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  const response = await fetch("http://127.0.0.1:8000/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      email: email,
-      password: password
-    })
-  });
-
-  const data = await response.json();
-
-  if (data.status === "success") {
-    alert("Login successful");
-
-    // dashboard page open
-    window.location.href = "dashboard.html";
-
-  } else {
-    alert("Invalid login");
-  }
-}
-</script>
 </head>
 
 <body>
 
-<div class="login-container">
+    <div class="login-container">
 
-<h2>CoreInventory</h2>
-<p class="subtitle">Inventory Management System</p>
+        <h2>CoreInventory</h2>
+        <p class="subtitle">Inventory Management System</p>
 
 <form>
  
 <label>Email / Username</label>
-<input type="text" id="email" placeholder="Enter email or username" required>
+<input type="text" placeholder="Enter email or username" required>
 
 <label>Password</label>
-<input type="password" id="password" placeholder="Enter password" required>
+<input type="password" placeholder="Enter password" required>
 
-<button onclick="loginUser(event)">Login</button>
+<button type="submit">Login</button>
 
-<p class="forgot">
-<a href="forgot-password.html">Forgot Password?</a>
-</p>
+            <p class="forgot">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </p>
 
-</form>
+        </form>
 
-</div>
+    </div>
 
 </body>
+
 </html>

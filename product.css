@@ -28,9 +28,12 @@ text-decoration:none;
 }
 
 .sidebar a:hover{
-background:#334155;
+background:rgb(110, 108, 105);
+color: lightblue;
 }
-
+#Logout:hover {
+    color: red;
+}
 /* Main Area */
 
 .main{
@@ -122,5 +125,6 @@ border-bottom:1px solid #eee;
 }
 
 tr:hover{
-background:#f1f5f9;
+background:white
+;
 }
